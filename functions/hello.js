@@ -18,7 +18,11 @@ exports.handler = async (event) => {
   console.log(JSON.stringify(votesArray));
   return {
     statusCode: 200,
-    header: { "Access-Control-Allow-Origin": "*" },
+    headers: { "Access-Control-Allow-Origin": "*" },
     body: JSON.stringify(votesArray),
   };
 };
+//const subject = event.queryStringParameters.name || "World";
+//return {
+//statusCode: 200,
+//body: `Hello ${subject}!`,
